@@ -3,6 +3,7 @@ import "./task.css";
 import { useState } from "react";
 import { updatedTask } from "../actions/modifyTask";
 import { useDispatch } from "react-redux";
+import modifyTask from "../reducers/modifyTask";
 
 
 function Task( {data } ) {
@@ -16,7 +17,7 @@ function Task( {data } ) {
   let [editIcon, setEditIcon] = useState("create-outline");
 
   function deleteTask(){
-    dispatch(updatedTask( {
+    dispatch( modifyTask.actions.updateTask( {
       id: data.id,
       status : null
     }))

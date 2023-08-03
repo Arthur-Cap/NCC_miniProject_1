@@ -7,6 +7,7 @@ import Task from "../task/task";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { useDispatch } from "react-redux";
 import { addTask } from "../actions/modifyTask";
+import modifyTask from "../reducers/modifyTask";
 
 function Detail({tasks, updateTask, addTask}) {
  
@@ -55,7 +56,7 @@ function TaskList ({ updateTask , onClose}){
 
   function demoAdd (){
     
-    dispatch( addTask (
+    dispatch( modifyTask.actions.addTask (
       { id : 11,
         detail: "Học TEC",
         time: "2023-07-22T10:16",

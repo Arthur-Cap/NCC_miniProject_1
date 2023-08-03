@@ -3,12 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createStore } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 import modifyTasks from "./component/reducers/modifyTask";
 import { Provider } from "react-redux";
 import { addTask } from "./component/actions/modifyTask";
 
-export let taskStore = createStore(modifyTasks);
+export let taskStore = configureStore(modifyTasks);
   
 
 taskStore.dispatch(addTask( {
