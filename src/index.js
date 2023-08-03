@@ -6,12 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import { configureStore } from "@reduxjs/toolkit";
 import modifyTasks from "./component/reducers/modifyTask";
 import { Provider } from "react-redux";
-import { addTask } from "./component/actions/modifyTask";
+import modifyTask from "./component/reducers/modifyTask";
 
 export let taskStore = configureStore(modifyTasks);
   
 
-taskStore.dispatch(addTask( {
+taskStore.dispatch(modifyTask.actions.updateTask( {
   id : 9,
   detail: "clm",
   time: "2023-07-22T10:16",

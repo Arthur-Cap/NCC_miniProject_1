@@ -1,7 +1,6 @@
 import React from "react";
 import "./task.css";
 import { useState } from "react";
-import { updatedTask } from "../actions/modifyTask";
 import { useDispatch } from "react-redux";
 import modifyTask from "../reducers/modifyTask";
 
@@ -27,7 +26,7 @@ function Task( {data } ) {
     if(statusBut==null){taskStatusFinal = taskStatus;}
     else{taskStatusFinal =statusBut}
 
-    dispatch(updatedTask( 
+    dispatch(modifyTask.actions.updateTask( 
       {
         id: data.id,
         detail: taskDetai,
