@@ -73,27 +73,20 @@ export default createSlice({
     { id: 6, detail: "Học AI", time: "2023-07-22T10:16", status: true },
   ],
   reducers: {
-
     addTask: (tasks, action) => {
-      console.log("đã thêm ")
+      console.log("đã thêm ");
       tasks.push(action.payload);
     },
     updateTask: (tasks, action) => {
-
-        tasks = tasks
-        .map((task) => {
-          console.log("test1",task.id);
-          if (task.id === action.payload.id && action.payload.status == null) {
-            return null;
-          } else if (task.id === action.payload.id) {
-            return action.payload;
-          }
-          return task;
-        })
-        .filter((task) => task !== null);
-        
-        console.log(tasks.forEach(task => console.log(task.detail)));
-        
+      return tasks.map(task => {
+                    if (task.id === action.payload.id && task.status == null) {
+                      return null;
+                    } else if (task.id === action.payload.id) {
+                      return action.payload;
+                    }
+                    return task;
+                  }).filter((task) => task !== null)
+            
     },
-  }
+  },
 });

@@ -34,7 +34,6 @@
           </div>
           <div className="nearest-task">
             <h1>Incoming Task</h1>
-            {console.log("o day", taskss[0])}
             {taskss.length > 0 ? (
             <Task data={taskss[0]}></Task>
             ) : "You free today, boizzz"}
