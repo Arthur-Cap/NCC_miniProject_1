@@ -1,13 +1,21 @@
 import React from "react";
 import "./task.css";
-import { useState } from "react";
+import { useState,useEffect} from "react";
 import { useDispatch } from "react-redux";
 import modifyTask from "../reducers/modifyTask";
 
 
 function Task( {data } ) {
   const dispatch = useDispatch ();
+  console.log("cmn",data);
 
+  useEffect(() => {
+    setTaskDetail(data.detail);
+    setTaskStatus(data.status);
+    setTaskTime(data.time);
+    setTaskEdit(true);
+    setEditIcon("create-outline");
+},[data]);
 
   let [taskDetai, setTaskDetail] = useState(data.detail);
   let [taskStatus, setTaskStatus] = useState(data.status);
