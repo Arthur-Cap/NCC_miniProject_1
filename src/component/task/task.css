@@ -1,0 +1,106 @@
+.task {
+  background-color: rgba(240, 248, 255, 0.527);
+  width: 100%;
+  padding: 20px ;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+
+}
+.task-line1{
+    display: flex ;
+}
+.task-line2{
+    display: flex ;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.task-line1 button {
+    color: rgb(14, 41, 85);
+    border-radius: 5px;
+    width: 10%;
+    height: calc(width);
+    font-size: 2rem;
+    background-color: white;
+    margin-left: 13px;
+    border: 1px solid rgb(156, 156, 156);
+}
+textarea {
+    border-radius: 5px;
+    width: 87%;
+}
+input {
+    user-select: none;
+}
+input[type="datetime-local"] {
+    border-radius: 3px;
+    border: none;
+    height: 25px;
+    color : rgb(85, 85, 85);
+    font-weight: bold;
+
+}
+
+.status-button{
+    display: flex;
+}
+.status-button input[type="radio"] {
+    display : none;
+}
+.status-button label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(111, 111, 111);
+    margin-left: 20px;
+    min-width: 100px;
+    height: 100%;
+    border-radius: 3px;
+    border: none;
+    color : rgb(85, 85, 85);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.status-button input[type="radio"].isActive:checked + label {
+    background-color: rgb(0, 255, 0);
+    color: white;
+  }
+  
+  .status-button  input[type="radio"]#Complete:checked + label {
+    background-color: rgb(227, 231, 0);
+    color: rgb(255, 255, 255);
+  }
+
+.status-button button{
+    margin-left: 20px;
+    min-width: 100px;
+    height: 100%;
+    border-radius: 3px;
+    border: none;
+    color : rgb(85, 85, 85);
+    font-weight: bold;
+}
+.isActive{
+    background-color: rgb(128, 255, 0) ;
+    box-shadow: 0px 0px 15px 5px rgb(145, 255, 36);
+}
+.isNotActive{
+    background-color: rgb(161, 161, 161) ;
+}
+.isComplete{
+    background-color: rgb(242, 255, 0) ;
+    box-shadow: 0px 0px 15px 5px rgb(221, 255, 0);
+}
+.isNotComplete{
+    background-color: rgb(161, 161, 161);
+}
+.delete{
+    background-color: rgb(255, 129, 129) ;
+}
+input:disabled {
+    background-color: aliceblue;
+}
+textarea:disabled {
+    background-color: aliceblue;
+}

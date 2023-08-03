@@ -1,0 +1,18 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url(C:\Users\acer\Documents\1Proj\NCC\ncc-react-training\todo\image\misty-mountain-ranges-at-sunrise.jpg); */
+  background-image: url(C:\Users\acer\Documents\1Proj\NCC\ncc-react-training\todo\image\mountain-magic-hour.jpg);
+  background-size: 100%;
+  transition: all 1s ease;
+  background-position: top center;
+  
+}
+img {
+  width: 100%;
+}
+
