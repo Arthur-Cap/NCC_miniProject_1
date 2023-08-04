@@ -7,7 +7,9 @@ import modifyTask from "../reducers/modifyTask";
 
 function Task( {data } ) {
   const dispatch = useDispatch ();
-  console.log("cmn",data);
+  console.log("aaaaaa",data.de);
+
+//comment đoạn sau để gặp lỗi :>
 
   useEffect(() => {
     setTaskDetail(data.detail);
